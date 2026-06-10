@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방화 마사지 이벤트 블로그 | 형님들 여기 붙어</title>
+    <meta name="description" content="방화 마사지 이벤트 꿀팁 대방출! 1+1 할인부터 야간특가까지, 내돈내산 솔직후기. 전화 010-6279-0862로 지바로 콜!">
+    <meta name="keywords" content="방화 마사지, 방화 마사지 이벤트, 방화 1인샵, 방화 스웨디시, 방화건마, 마사지 할인, 방화 블로그">
+    <meta name="author" content="방화마사지">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b05-bh-massage-evt.vercel.app/">
+    <!-- OG Meta -->
+    <meta property="og:title" content="방화 마사지 이벤트 블로그 - 형님들 여기여기 붙어라 🔥">
+    <meta property="og:description" content="방화에서 제일 핫한 마사지 이벤트 소식! 1+1 할인부터 야간타임 특가까지, 형님들 근육 풀어드립니다. 전화 010-6279-0862로 지바로 콜!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b05-bh-massage-evt.vercel.app/">
+    <meta property="og:image" content="https://t3b05-bh-massage-evt.vercel.app/og-image.jpg">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- CSS 핵심: hamburger-menu, responsive-768 -->
+    <style>
+        /* ----- CSS 변수 (Street Brutalist) ----- */
+        :root {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2a2a2a;
+            --text-primary: #f0f0f0;
+            --text-secondary: #c0c0c0;
+            --accent: #ff4d00;
+            --accent-hover: #e04400;
+            --border: #3a3a3a;
+            --font-main: 'Courier New', Courier, monospace;
+            --font-heading: 'Impact', 'Arial Black', sans-serif;
+            --spacing: 1.5rem;
+            --max-width: 1200px;
+        }
+
+        /* ----- 리셋 & 기본 ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ----- 헤더 ----- */
+        .header {
+            background-color: var(--bg-secondary);
+            border-bottom: 4px solid var(--accent);
+            padding: 1rem var(--spacing);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header__logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header__logo a {
+            color: var(--accent);
+        }
+
+        .header__logo a:hover {
+            text-decoration: none;
+        }
+
+        /* ----- 네비게이션 (햄버거 메뉴 포함) ----- */
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav__list {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav__list--active {
+            color: var(--accent);
+        }
+
+        .nav__link {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav__link:hover {
+            border-bottom-color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* 햄버거 버튼 */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+
+        .hamburger__line {
+            width: 30px;
+            height: 3px;
+            background-color: var(--text-primary);
+            margin: 4px 0;
+            transition: all 0.3s;
+        }
+
+        /* 반응형 768px */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav__list {
+                display: none;
+                flex-direction: column;
+                background-color: var(--bg-secondary);
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 100%;
+                padding: 1rem;
+                border-bottom: 4px solid var(--accent);
+                gap: 1rem;
+            }
+
+            .nav__list--open {
+                display: flex;
+            }
+
+            .nav__link {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        /* ----- 메인 콘텐츠 ----- */
+        .main {
+            flex: 1;
+            padding: 2rem var(--spacing);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* ----- 블로그 포스트 ----- */
+        .blog-post {
+            background-color: var(--bg-secondary);
+            border: 2px solid var(--border);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 8px 8px 0 var(--accent);
+        }
+
+        .blog-post__title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-post__meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .blog-post__content {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .blog-post__content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-post__content strong {
+            color: var(--accent);
+        }
+
+        .blog-post__cta {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--bg-primary);
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+            margin-top: 1.5rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 4px 4px 0 #000;
+        }
+
+        .blog-post__cta:hover {
+            background-color: var(--accent-hover);
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 #000;
+            text-decoration: none;
+        }
+
+        /* ----- 푸터 ----- */
+        .footer {
+            background-color: var(--bg-secondary);
+            border-top: 4px solid var(--accent);
+            padding: 2rem var(--spacing);
+            text-align: center;
+            color: var(--text-secondary);
+            margin-top: auto;
+        }
+
+        .footer__phone {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--accent);
+            display: block;
+            margin: 1rem 0;
+        }
+
+        .footer__copy {
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+
+        /* ----- 반응형 이미지 등 ----- */
+        @media (max-width: 768px) {
+            .blog-post__title {
+                font-size: 1.8rem;
+            }
+            .blog-post {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="header__logo">
+            <a href="/">방화마사지</a>
+        </div>
+        <nav class="nav">
+            <button class="hamburger" id="hamburgerBtn" aria-label="메뉴 열기">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+            <ul class="nav__list" id="navList">
+                <li><a href="/" class="nav__link">홈</a></li>
+                <li><a href="/about" class="nav__link">소개</a></li>
+                <li><a href="/event" class="nav__link">이벤트</a></li>
+                <li><a href="/blog" class="nav__link nav__list--active">블로그</a></li>
+                <li><a href="/contact" class="nav__link">연락처</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 메인 -->
+    <main class="main">
+        <article class="blog-post">
+            <h1 class="blog-post__title">🔥 방화 마사지 이벤트 꿀팁 대방출! 형님들 여기 붙어</h1>
+            <div class="blog-post__meta">
+                <span>✍️ 작성: 방화 매니저 형</span>
+                <span>📅 2025.04.13</span>
+                <span>🏷️ #방화마사지 #이벤트 #내돈내산</span>
+            </div>
+            <div class="blog-post__content">
+                <p>형님들! 안녕하세요. 방화에서 마사지 좀 아는 놈이 왔습니다. 오늘은 진짜 핫한 방화 마사지 이벤트 소식을 가져왔어요. 사실 나도 처음에는 "에이, 또 뻥치겠지" 했는데, 직접 몸으로 부딪혀보니 이건 레전드네요. ㅋㅋㅋ</p>
+
+                <p>일단 <strong>1+1 할인 이벤트</strong>는 기본이구요, 밤 9시 이후에는 <strong>야간타임 특가</strong>가 적용돼서 30%나 할인된 가격에 스웨디시를 받을 수 있어요. 내가 지난주에 야간타임으로 갔는데, 솔직히 이 가격에 이 퀄리티면 형님들도 바로 달려와야 합니다. 근육이 녹는 느낌? 진짜 대박임.</p>
+
+                <p><strong>방화 1인샵</strong>이라서 프라이빗하게 관리받을 수 있고, 관리사님 손길이 예술입니다. 특히 어깨랑 허리 푸는 테크닉이 장난 아니에요. 나처럼 컴퓨터 앞에 하루 종일 앉아있는 형님들한텐 더할 나위 없음.</p>
+
+                <p>그리고 형님들, 이벤트 기간이 한정적이래요! <strong>방화 마사지 이벤트</strong>는 매월 첫째 주에만 진행한다고 하니, 달력에 체크해두셔야 합니다. 나도 이번 달에 또 예약하려고 전화 돌렸는데 벌써 자리 꽉 찼더라구요. ㅜㅜ 대신 대기 걸어놨습니다.</p>
+
+                <p>마지막으로 꿀팁 하나 드리자면, 전화 예약할 때 "블로그 보고 왔습니다" 하면 <strong>서비스 10분 추가</strong> 해준다는 썰이 있어요. 실제로 나도 그렇게 해서 발마사지 10분 더 받았습니다. ㅎㅎ 진짜 형님들, 이 기회 놓치지 마세요. 전화번호는 010-6279-0862 이니까 지금 바로 콜! </p>
+
+                <a href="tel:01062790862" class="blog-post__cta">📞 지금 전화 예약</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <span class="footer__phone">📞 010-6279-0862</span>
+        <p>방화 마사지 | 서울 강서구 방화동</p>
+        <p class="footer__copy">&copy; 2025 방화마사지. All rights reserved. 형님들 건강 챙기세요!</p>
+    </footer>
+
+    <!-- 햄버거 메뉴 스크립트 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburgerBtn');
+            const navList = document.getElementById('navList');
+
+            if (hamburger && navList) {
+                hamburger.addEventListener('click', function() {
+                    navList.classList.toggle('nav__list--open');
+                });
+
+                // 메뉴 닫기: 링크 클릭 시
+                document.querySelectorAll('.nav__link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth <= 768) {
+                            navList.classList.remove('nav__list--open');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

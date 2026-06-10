@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방화 마사지 정보 - 형님들 여기여기 붙어라 🔥</title>
+    <meta name="description" content="방화 마사지샵 정보 총정리! 위치, 운영시간, 가격, 매니저 소개까지. 형님들이 궁금해하는 모든 것. 전화 010-6279-0862로 지바로 콜!">
+    <meta name="keywords" content="방화 마사지 정보, 방화 마사지 위치, 방화 1인샵 정보, 방화 스웨디시 정보, 방화건마, 마사지 가격, 방화 마사지 매니저">
+    <meta name="author" content="방화마사지">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b05-bh-massage-evt.vercel.app/info">
+    <meta property="og:title" content="방화 마사지 정보 - 형님들 여기여기 붙어라 🔥">
+    <meta property="og:description" content="방화 마사지샵 정보 총정리! 위치, 운영시간, 가격, 매니저 소개까지. 형님들이 궁금해하는 모든 것. 전화 010-6279-0862로 지바로 콜!">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=방화+마사지+정보">
+    <meta property="og:url" content="https://t3b05-bh-massage-evt.vercel.app/info">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        :root {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2a2a2a;
+            --text-primary: #f0f0f0;
+            --text-secondary: #b0b0b0;
+            --accent-red: #e63946;
+            --accent-orange: #f4a261;
+            --accent-yellow: #e9c46a;
+            --border-thick: 4px solid #e63946;
+            --border-light: 2px solid #2a2a2a;
+            --font-main: 'Courier New', monospace;
+            --spacing-unit: 1.5rem;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-unit); }
+        /* 헤더 */
+        header {
+            background: var(--bg-secondary);
+            border-bottom: var(--border-thick);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .logo span { color: var(--accent-yellow); }
+        /* 네비게이션 */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            padding: 0.4rem 0.8rem;
+            border: var(--border-light);
+            transition: all 0.2s;
+        }
+        nav a:hover { background: var(--accent-red); color: #fff; border-color: var(--accent-red); }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+        .hamburger span {
+            width: 30px;
+            height: 4px;
+            background: var(--text-primary);
+            display: block;
+        }
+        /* 메인 컨텐츠 */
+        main { padding: 3rem 0; }
+        .page-title {
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            color: var(--accent-orange);
+            border-left: 8px solid var(--accent-red);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            word-break: break-word;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .info-card {
+            background: var(--bg-secondary);
+            border: var(--border-light);
+            padding: 1.5rem;
+        }
+        .info-card h3 {
+            font-size: 1.6rem;
+            color: var(--accent-yellow);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 0.5rem;
+        }
+        .info-card p, .info-card ul { color: var(--text-secondary); font-size: 0.95rem; }
+        .info-card ul { list-style: none; padding-left: 0; }
+        .info-card li { margin-bottom: 0.6rem; padding-left: 1rem; border-left: 3px solid var(--accent-orange); }
+        .highlight { color: var(--accent-red); font-weight: bold; }
+        /* FAQ 섹션 */
+        .faq-section { margin-top: 2rem; }
+        .faq-item {
+            background: var(--bg-secondary);
+            border: var(--border-light);
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .faq-item h4 {
+            font-size: 1.2rem;
+            color: var(--accent-yellow);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item p {
+            margin-top: 0.8rem;
+            color: var(--text-secondary);
+            display: none;
+        }
+        .faq-item.active p { display: block; }
+        /* CTA */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--accent-red), #b71c1c);
+            padding: 2rem;
+            text-align: center;
+            border: var(--border-thick);
+            margin-top: 2rem;
+        }
+        .cta-banner h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .cta-banner a {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            border: 2px solid #fff;
+            padding: 0.6rem 2rem;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: 0.2s;
+        }
+        .cta-banner a:hover { background: #fff; color: var(--accent-red); }
+        /* 푸터 */
+        footer {
+            background: var(--bg-secondary);
+            border-top: var(--border-thick);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .header-inner { flex-wrap: wrap; }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 0.5rem;
+                padding: 1rem 0;
+            }
+            nav ul.open { display: flex; }
+            .hamburger { display: flex; }
+            .info-grid { grid-template-columns: 1fr; }
+            .page-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">방화<span>마사지</span></div>
+            <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/info">정보</a></li>
+                    <li><a href="/event">이벤트</a></li>
+                    <li><a href="/review">후기</a></li>
+                    <li><a href="/contact">연락처</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">📋 방화 마사지 정보</h1>
+
+        <section class="info-grid">
+            <div class="info-card">
+                <h3>📍 위치 & 오시는 길</h3>
+                <ul>
+                    <li>서울 강서구 방화동 (방화역 1번 출구 도보 3분)</li>
+                    <li>건물 1층, 주차 가능 (빌딩 내 주차장)</li>
+                    <li>내비: '방화마사지' 검색 (카카오내비, 네이버지도)</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>🕐 운영 시간</h3>
+                <p>
+                    <span class="highlight">매일 10:00 ~ 24:00</span><br>
+                    (야간타임 22:00~24:00 특가 적용)<br>
+                    형님들 야간에 오면 더 이득!<br>
+                    전화 예약 시 24시 이후도 가능 (문의必)
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>💰 가격 안내</h3>
+                <ul>
+                    <li>기본 코스 (60분) : <span class="highlight">70,000원</span></li>
+                    <li>스웨디시 (60분) : <span class="highlight">90,000원</span></li>
+                    <li>야간타임 (22시 이후) : 전 코스 <span class="highlight">10,000원 할인</span></li>
+                    <li>1+1 이벤트 : 첫 방문 고객 1+1 적용 (자세한 건 전화로!)</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>👤 매니저 소개</h3>
+                <p>
+                    형님들, 저희 샵은 <span class="highlight">20대 후반~30대 초반</span>의 
+                    베테랑 매니저님들이 계세요. 손기술은 기본, 친절함은 덤! 
+                    남성분들도 여성분들도 다 편하게 오세요. 
+                    (매니저 변경 가능하니 전화 주시면 맞춤 추천)
+                </p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2 style="font-size:2rem; color:var(--accent-yellow); margin-bottom:1.5rem; border-left:8px solid var(--accent-red); padding-left:1rem;">
+                ❓ 형님들이 자주 묻는 질문
+            </h2>
+
+            <div class="faq-item active">
+                <h4>🚗 주차 가능한가요? <span style="color:var(--accent-orange);">▼</span></h4>
+                <p>네 가능합니다! 건물 내 지하 주차장이 있고, 빌딩 1층에도 2대 정도 주차 가능해요. 내비 찍고 오시면 직원이 안내해드립니다. (자리가 없으면 근처 공영주차장 이용, 영수증 지참 시 소정의 혜택)</p>
+            </div>
+            <div class="faq-item">
+                <h4>⏳ 첫 방문인데 시간이 얼마나 걸리나요? <span style="color:var(--accent-orange);">▼</span></h4>
+                <p>보통 기본 코스 60분이면 충분하지만, 형님 컨디션에 따라 90분~120분도 추천드려요. 첫 방문 상담 5분 포함하면 넉넉히 잡으세요. 미리 전화 주시면 대기 시간 없이 바로 입장!</p>
+            </div>
+            <div class="faq-item">
+                <h4>💳 카드 결제 되나요? <span style="color:var(--accent-orange);">▼</span></h4>
+                <p>당연하죠! 카드, 현금, 계좌이체, 제로페이 다 됩니다. 영수증 발행도 가능하고요. (현금 영수증은 별도 요청)</p>
+            </div>
+            <div class="faq-item">
+                <h4>🤝 1+1 이벤트는 어떻게 적용되나요? <span style="color:var(--accent-orange);">▼</span></h4>
+                <p>첫 방문 고객님께 1+1 혜택을 드려요. 1회 결제 시 동일 코스 1회 추가 제공! (재방문 시 사용 가능) 자세한 내용은 전화 010-6279-0862로 물어보시면 착하게 알려드림.</p>
+            </div>
+        </section>
+
+        <div class="cta-banner">
+            <h2>🔥 지금 전화하면 추가 할인!</h2>
+            <p style="font-size:1.1rem; margin-bottom:0.5rem;">형님, 지금 전화하시면 첫 방문 1+1 + 야간타임 할인까지 중복 적용 가능!</p>
+            <a href="tel:010-6279-0862">📞 010-6279-0862</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>방화마사지 | 서울 강서구 방화동 | 전화: 010-6279-0862</p>
+            <p style="margin-top:0.5rem;">⏰ 매일 10:00~24:00 (야간 예약 가능) | 후불제 | 신용카드 OK</p>
+            <p style="margin-top:1rem; font-size:0.8rem;">※ 본 페이지는 정보 제공 목적입니다. 이용 전 전화 문의 바랍니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 햄버거 메뉴
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('nav').querySelector('ul').classList.toggle('open');
+        });
+
+        // FAQ 아코디언
+        document.querySelectorAll('.faq-item h4').forEach(item => {
+            item.addEventListener('click', function() {
+                const parent = this.parentElement;
+                parent.classList.toggle('active');
+                const arrow = this.querySelector('span');
+                if (arrow) arrow.textContent = parent.classList.contains('active') ? '▲' : '▼';
+            });
+        });
+    </script>
+</body>
+</html>
