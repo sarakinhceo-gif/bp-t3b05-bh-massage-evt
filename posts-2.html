@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · t3b05-bh-massage-evt</title>
+  <meta name="description" content="t3b05-bh-massage-evt에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://banghwa-body-guide.mapo-room-guide.xyz/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ :root {
+ --bg-primary: #1a1a1a;
+ --bg-secondary: #2a2a2a;
+ --text-primary: #f0f0f0;
+ --text-secondary: #b0b0b0;
+ --accent-red: #e63946;
+ --accent-orange: #f4a261;
+ --accent-yellow: #e9c46a;
+ --border-thick: 4px solid #e63946;
+ --border-light: 2px solid #2a2a2a;
+ --font-main: 'Courier New', monospace;
+ --spacing-unit: 1.5rem;
+ }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+ background-color: var(--bg-primary);
+ color: var(--text-primary);
+ font-family: var(--font-main);
+ line-height: 1.6;
+ min-height: 100vh;
+ }
+ .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-unit); }
+ /* 헤더 */
+ header {
+ background: var(--bg-secondary);
+ border-bottom: var(--border-thick);
+ padding: 1rem 0;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ }
+ .header-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ font-size: 2rem;
+ font-weight: bold;
+ color: var(--accent-red);
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ }
+ .logo span { color: var(--accent-yellow); }
+ /* 네비게이션 */
+ nav ul {
+ list-style: none;
+ display: flex;
+ gap: 2rem;
+ }
+ nav a {
+ color: var(--text-primary);
+ text-decoration: none;
+ font-size: 1.1rem;
+ text-transform: uppercase;
+ padding: 0.4rem 0.8rem;
+ border: var(--border-light);
+ transition: all 0.2s;
+ }
+ nav a:hover { background: var(--accent-red); color: #fff; border-color: var(--accent-red); }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 0.5rem;
+ }
+ .hamburger span {
+ width: 30px;
+ height: 4px;
+ background: var(--text-primary);
+ display: block;
+ }
+ /* 메인 컨텐츠 */
+ main { padding: 3rem 0; }
+ .page-title {
+ font-size: 2.8rem;
+ text-transform: uppercase;
+ color: var(--accent-orange);
+ border-left: 8px solid var(--accent-red);
+ padding-left: 1.5rem;
+ margin-bottom: 2rem;
+ word-break: break-word;
+ }
+ .info-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 2rem;
+ margin-bottom: 3rem;
+ }
+ .info-card {
+ background: var(--bg-secondary);
+ border: var(--border-light);
+ padding: 1.5rem;
+ }
+ .info-card h3 {
+ font-size: 1.6rem;
+ color: var(--accent-yellow);
+ margin-bottom: 1rem;
+ border-bottom: 2px solid var(--accent-red);
+ padding-bottom: 0.5rem;
+ }
+ .info-card p, .info-card ul { color: var(--text-secondary); font-size: 0.95rem; }
+ .info-card ul { list-style: none; padding-left: 0; }
+ .info-card li { margin-bottom: 0.6rem; padding-left: 1rem; border-left: 3px solid var(--accent-orange); }
+ .highlight { color: var(--accent-red); font-weight: bold; }
+ /* FAQ 섹션 */
+ .faq-section { margin-top: 2rem; }
+ .faq-item {
+ background: var(--bg-secondary);
+ border: var(--border-light);
+ padding: 1.2rem 1.5rem;
+ margin-bottom: 1rem;
+ }
+ .faq-item h4 {
+ font-size: 1.2rem;
+ color: var(--accent-yellow);
+ cursor: pointer;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .faq-item p {
+ margin-top: 0.8rem;
+ color: var(--text-secondary);
+ display: none;
+ }
+ .faq-item.active p { display: block; }
+ /* CTA */
+ .cta-banner {
+ background: linear-gradient(135deg, var(--accent-red), #b71c1c);
+ padding: 2rem;
+ text-align: center;
+ border: var(--border-thick);
+ margin-top: 2rem;
+ }
+ .cta-banner h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+ .cta-banner a {
+ color: #fff;
+ font-size: 1.5rem;
+ text-decoration: none;
+ border: 2px solid #fff;
+ padding: 0.6rem 2rem;
+ display: inline-block;
+ margin-top: 1rem;
+ transition: 0.2s;
+ }
+ .cta-banner a:hover { background: #fff; color: var(--accent-red); }
+ /* 푸터 */
+ footer {
+ background: var(--bg-secondary);
+ border-top: var(--border-thick);
+ padding: 2rem 0;
+ text-align: center;
+ color: var(--text-secondary);
+ }
+ /* 반응형 */
+ @media (max-width: 768px) {
+ .header-inner { flex-wrap: wrap; }
+ nav ul {
+ display: none;
+ flex-direction: column;
+ width: 100%;
+ gap: 0.5rem;
+ padding: 1rem 0;
+ }
+ nav ul.open { display: flex; }
+ .hamburger { display: flex; }
+ .info-grid { grid-template-columns: 1fr; }
+ .page-title { font-size: 2rem; }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · t3b05-bh-massage-evt">
+  <meta property="og:description" content="t3b05-bh-massage-evt에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://banghwa-body-guide.mapo-room-guide.xyz/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container header-inner">
+ <div class="logo">방화<span>마사지</span></div>
+ <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+ 
+ </button>
+ <nav id="nav">
+ <ul>
+ <li><a href="/">홈</a></li>
+ <li><a href="/info">정보</a></li>
+ <li><a href="/event">이벤트</a></li>
+ <li><a href="/review">후기</a></li>
+ <li><a href="/contact">연락처</a></li>
+ </ul>
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 40개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0238.html">방화 마사지 이벤트 정보 분석을 통한 구글 신뢰 지수 모발이식 솔루션 가격 기준</a>
+        <p class="post-item__summary">방화 마사지 이벤트 정보를 검색하다 보면 넘쳐나는 광고성 게시글 속에서 진실된 정보를 찾기란 매우 어려운 일입니다. 정보의 신뢰도를 판별하는 기준은 결국 객관적인 지표와 전문가의 검증 체계에 달려 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0177.html">방화 마사지 이벤트 찾아보다 마곡 가라오케 추천정보 확인하기</a>
+        <p class="post-item__summary">오랜만에 동료들과 저녁 식사를 마친 뒤 특별한 즐길 거리를 찾던 중 방화 마사지 이벤트 소식을 접하게 되었습니다. 하지만 이내 분위기를 전환할 수 있는 장소를 찾으려는 동료들의 의견에 따라 마곡 일</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0178.html">방화 마사지 이벤트에 대한 오해와 마곡 유흥 추천정보 활용</a>
+        <p class="post-item__summary">방화 마사지 이벤트라는 키워드를 접할 때 많은 이들이 특정 서비스만을 떠올리곤 하지만 이는 다소 단편적인 접근일 수 있습니다. 지역 내에서 제공되는 다양한 문화 활동을 유흥이라는 범주 안에서 무조건</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0179.html">방화 마사지 이벤트 고민 끝에 선택하는 합정 노래방 추천정보</a>
+        <p class="post-item__summary">청결한 시설과 쾌적한 음향 시스템 그리고 합리적인 서비스 시간은 노래방을 선택하는 핵심 충족 조건입니다. 방화 마사지 이벤트 이후 몸의 피로를 풀고 목소리를 내며 스트레스를 해소하고 싶어 하는 이들</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0180.html">방화 마사지 이벤트 너머 연남 클럽 추천정보 확인하기</a>
+        <p class="post-item__summary">혹시 조용한 휴식보다는 역동적인 음악과 사람들 속에서 에너지를 발산하고 싶으신가요? 방화 마사지 이벤트처럼 차분한 분위기도 좋지만 때로는 낯선 공간에서 음악에 몸을 맡기는 경험이 더 필요할 때가 있</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0181.html">방화 마사지 이벤트 활용법과 합정 셔츠룸 추천정보 탐색</a>
+        <p class="post-item__summary">일상에서 쌓인 피로를 풀기 위해 방화 마사지 이벤트 정보를 찾는 분들이 많습니다. 동시에 저녁 시간을 활용해 여가를 즐기려는 이들은 합정 일대의 유흥 문화에도 관심을 두곤 합니다. 신뢰할 수 있는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0182.html">방화 마사지 이벤트 분석과 공덕 가라오케 추천정보 비교</a>
+        <p class="post-item__summary">방화 마사지 이벤트 관련 정보와 공덕 지역의 유흥 시설을 비교할 때 가장 중요한 것은 개인의 목적에 맞는 선택지입니다. 가라오케를 찾을 때 정액제 요금 시스템을 갖춘 곳과 서비스 항목별로 비용이 차</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0183.html">방화 마사지 이벤트 예약 시 주의사항과 상수 마사지 추천정보</a>
+        <p class="post-item__summary">방화 마사지 이벤트 정보를 찾다가 많은 이들이 예약을 망치는 이유는 성급한 결정 때문입니다. 흔히 범하는 실수는 업체의 상세 정보를 확인하지 않고 당일 무작정 방문을 시도하는 것입니다. 이러한 실패</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0184.html">방화 마사지 이벤트 체크리스트와 망원 노래방 추천정보</a>
+        <p class="post-item__summary">방화 마사지 이벤트 정보를 찾는 것만큼이나 중요한 것이 여가를 보낼 망원 노래방을 고르는 안목입니다. 어떤 곳을 방문하든 시설의 안전성과 위치는 가장 먼저 체크해야 할 항목입니다. 제대로 된 환경에</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0185.html">방화 마사지 이벤트 활용 전 반드시 알아야 할 홍대 노래방 추천정보</a>
+        <p class="post-item__summary">친구들과 홍대 번화가를 걷다 보면 예기치 않게 호객 행위를 마주하는 경우가 잦습니다. 때로는 방화 마사지 이벤트 같은 문구에 현혹되어 계획에 없던 장소를 방문하려 하기도 합니다. 하지만 낯선 곳에 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0186.html">방화 마사지 이벤트 혜택보다 중요한 공덕 셔츠룸 추천정보 선택 가이드</a>
+        <p class="post-item__summary">공덕 지역에서 셔츠룸을 찾는 사람들이 흔히 하는 오해 중 하나는 무조건 저녁 이른 시간에 방문해야 서비스 질이 좋다는 생각입니다. 방화 마사지 이벤트 같은 프로모션 문구에만 집중하다 보면 정작 핵심</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0187.html">방화 마사지 이벤트 탐색보다 선행될 연남 유흥 추천정보와 인원 조건</a>
+        <p class="post-item__summary">성공적인 밤을 보내기 위한 조건은 다양합니다. 적절한 위치 선정, 예산의 준수, 그리고 동행 인원과의 합이 중요하게 작용합니다. 단순히 방화 마사지 이벤트 광고를 따라 움직이는 것보다는 본인의 모임</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-1.html">방화 마사지 이벤트 정보 안내</a>
+        <p class="post-item__summary">방화 지역에서 진행 중인 마사지 관련 이벤트는 주로 신규 고객 유치와 정기 방문 고객을 위한 특별 할인 혜택으로 구성됩니다. 각 업소는 시즌이나 기념일을 활용하여 다양한 프로모션을 선보이며, 이러한</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-2.html">방화 마사지 이벤트 안내</a>
+        <p class="post-item__summary">방화 지역에서 진행되는 마사지 이벤트는 주로 계절별 프로모션이나기념일을 맞아 다양한 형태로 진행됩니다. 이런 이벤트는 일반적으로 특정 기간 동안 특별한 요금 체계를 제공하거나, 여러 메뉴를 조합한 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-1.html">방화 마사지 이벤트 정보 안내</a>
+        <p class="post-item__summary">방화 지역의 마사지 서비스는 다양한 이벤트와 함께 제공되는 경우가 많습니다. 지역 사회의 휴식 문화를 반영하여, 스트레스 해소와 신체 이완을 목적으로 하는 전문적인 마사지를 안내하는场所가 존재합니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-2.html">방화 마사지 이벤트 안내</a>
+        <p class="post-item__summary">방화 지역에서는 다양한 마사지 서비스와 연계된 이벤트가 정기적으로 진행됩니다. 이는 지역 상권 활성화와 고객의 편의를 증진시키기 위한 목적으로 운영되며, 방문 전 이벤트 일정과 세부 내용을 확인하는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-3.html">방화 마사지 이벤트 상세 안내</a>
+        <p class="post-item__summary">지역 내에서 진행되는 방화 마사지 이벤트는 고객들에게 다양한 서비스 혜택과 기회를 제공하는 중요한 문화적 현상입니다. 이러한 이벤트는 해당 지역 특유의 분위기와 결합되어, 방문하는 이들에게 독특한 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001.html">야, 그거 말이다. 스노든 USB에 있었던 진짜 얘기.</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-002-e5cwih.html">방화 마사지 이벤트</a>
+        <p class="post-item__summary">일상의 피로를 해소하고 몸과 마음의 안정을 찾기 위해 많은 분이 마사지를 찾고 계십니다. 이번에는 방화 지역에서 진행 중인 마사지 이벤트를 상세히 안내해 드리고자 합니다. 몸이 찌뿌듯하고 무거운 느</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/t3link-001-e5cwih.html">방화 마사지 이벤트</a>
+        <p class="post-item__summary">일상에서 쌓인 피로와 스트레스를 효과적으로 해소하고 싶은 분들을 위해 방화 지역 마사지 숍에서 준비한 특별한 이벤트를 소개합니다. 이번 행사는 평소 몸이 무겁게 느껴지거나 근육통으로 고생하는 분들이</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
